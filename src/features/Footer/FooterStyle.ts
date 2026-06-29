@@ -5,11 +5,12 @@ import styled from 'styled-components';
 export const FooterLayoutStyle = styled.footer`
 	background-color: #0b1329;
 	border-top: 1px solid #1e293b;
-	padding: 5rem 0 2.5rem 0;
+	padding: 5rem 1rem 2.5rem 1rem;
 	color: #94a3b8;
+	width: 100%;
 
 	.footer-container {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}

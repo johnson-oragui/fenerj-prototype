@@ -7,7 +7,7 @@ export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 70px;
+	height: 100px;
 	background-color: #0f172a;
 	border-bottom: 1px solid #1e293b;
 	display: flex;
