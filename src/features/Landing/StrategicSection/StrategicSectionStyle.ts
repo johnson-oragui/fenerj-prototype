@@ -27,11 +27,12 @@ const floatNode3 = keyframes`
 `;
 
 export const StrategyLayoutStyle = styled.section`
-	padding: 6rem 0;
+	padding: 7rem 1rem;
 	background-color: #0f172a;
+	max-width: 100%;
 
 	.strategy-container {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}
