@@ -9,16 +9,19 @@ import {
 	LuShieldAlert,
 	LuSunDim,
 	LuFileSpreadsheet,
+	LuZap,
+	LuConstruction,
+	LuHardHat,
 } from 'react-icons/lu';
 
-interface ServiceItem {
+export interface IServiceItem {
 	icon: JSX.Element;
 	title: string;
 	desc: string;
 }
 
 export const ServicesGrid = () => {
-	const services: ServiceItem[] = [
+	const services: IServiceItem[] = [
 		{
 			icon: <LuGlobe />,
 			title: 'ICT & Network Solutions',
@@ -35,14 +38,29 @@ export const ServicesGrid = () => {
 			desc: 'Expert satellite links from 1.2m up to 2.4m antennas alongside core Hub hardware orchestration for Shiron, Hughes, iDirect, and Linkstar. Complete RF licensed/unlicensed band optimization.',
 		},
 		{
-			icon: <LuShieldAlert />,
-			title: 'Security & Automation',
-			desc: 'Integrated security mapping via high-definition CCTV arrays, responsive biometrics, and deterministic network firewall engineering alongside deep enterprise Electronic Document Management Systems (EDMS).',
+			icon: <LuZap />,
+			title: 'Electrical Engineering & Distribution',
+			desc: 'Design and deployment of low, medium, and high-voltage power distribution networks, industrial earthing, lightning protection architectures, and integrated MEP (Mechanical, Electrical, Plumbing) services for commercial complexes.',
 		},
 		{
 			icon: <LuSunDim />,
 			title: 'Energy & Infrastructure',
 			desc: 'Bespoke alternative power procurement and clean engineering setups utilizing high-efficiency solar energy arrays, heavy duty inverters, and long-lifecycle deep-cycle battery banks.',
+		},
+		{
+			icon: <LuConstruction />,
+			title: 'Building Construction & Structures',
+			desc: 'Turnkey structural construction encompassing residential, commercial, and institutional complexes. Delivering robust structural design calculations, high-grade concrete pouring matrices, and complete interior fit-outs under rigorous safety protocols.',
+		},
+		{
+			icon: <LuHardHat />,
+			title: 'Civil & Road Construction',
+			desc: 'Heavy civil engineering works including flexible asphalt and rigid concrete road pavements, standard concrete drainage networks, earthworks, and structural retaining walls constructed to survive peak seasonal tropical runoff.',
+		},
+		{
+			icon: <LuShieldAlert />,
+			title: 'Security & Automation',
+			desc: 'Integrated security mapping via high-definition CCTV arrays, responsive biometrics, and deterministic network firewall engineering alongside deep enterprise Electronic Document Management Systems (EDMS).',
 		},
 		{
 			icon: <LuFileSpreadsheet />,

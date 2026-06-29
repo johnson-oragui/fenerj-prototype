@@ -78,9 +78,9 @@ export const Footer = () => {
 						<Link href="/faq" className="footer-link">
 							Knowledge FAQ
 						</Link>
-						<Link href="/guides" className="footer-link">
+						{/* <Link href="/guides" className="footer-link">
 							Network Guide
-						</Link>
+						</Link> */}
 						<a href="mailto:fenerjeng@gmail.com" className="footer-link">
 							Direct Support
 						</a>
