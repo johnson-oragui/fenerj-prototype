@@ -27,10 +27,11 @@ const softFloat = keyframes`
 
 export const ServicesLayout = styled.section`
 	background-color: #0b1329;
-	padding: 6rem 0;
+	padding: 7rem 1rem;
+	max-width: 100%;
 
 	.services-container {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}

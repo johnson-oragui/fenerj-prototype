@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { NavbarLayout } from './NavBarStyle';
+import Link from 'next/link';
+import Image from 'next/image';
+import { APP_LOGO } from '../../../public/path/asset-paths';
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +15,7 @@ const Navbar = () => {
 	const navigationItems = [
 		{ label: 'Home', href: '/#0' },
 		{ label: 'Services', href: '/#1' },
-		{ label: 'Our Blueprint', href: '#' },
+		{ label: 'FAQ', href: '/faq' },
 		{ label: 'Contact', href: '/contact' },
 		{ label: 'About Us', href: '/about' },
 	];
@@ -20,7 +23,15 @@ const Navbar = () => {
 	return (
 		<NavbarLayout $isOpen={isOpen}>
 			<div className="nav-logo" onClick={closeMenu}>
-				{process.env.NEXT_PUBLIC_APP_NAME}
+				<Link href="/">
+					<Image
+						alt={process.env.NEXT_PUBLIC_APP_NAME || 'FENERJ Engineering'}
+						src={APP_LOGO}
+						width={90}
+						height={26}
+						style={{ objectFit: 'contain', borderRadius: '35px' }}
+					/>
+				</Link>
 			</div>
 
 			<nav className="desktop-menu">

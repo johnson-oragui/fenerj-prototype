@@ -3,8 +3,10 @@
 import CustomButton from '@/components/CustomButton/CustomButton';
 import { HeroLayout } from './HeroStyle';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export const Hero = () => {
+	const router = useRouter();
 	const rotatingWords = [
 		'Alternative Power Engineering',
 		'ICT & Network Solutions',
@@ -38,8 +40,10 @@ export const Hero = () => {
 				</p>
 
 				<div className="hero-button-group">
-					<CustomButton>Request a Quote</CustomButton>
-					<CustomButton variant="outline">Explore Services</CustomButton>
+					{/* <CustomButton>Request a Quote</CustomButton> */}
+					<CustomButton variant="outline" onClick={() => router.push('/#1')}>
+						Explore Services
+					</CustomButton>
 				</div>
 			</div>
 		</HeroLayout>

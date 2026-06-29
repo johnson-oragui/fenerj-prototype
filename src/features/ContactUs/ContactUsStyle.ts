@@ -7,9 +7,10 @@ export const ContactLayout = styled.div`
 	color: #f8fafc;
 	min-height: 100vh;
 	padding: 6rem 0;
+	max-width: 100%;
 
 	.contact-container {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}

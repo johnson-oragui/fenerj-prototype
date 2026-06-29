@@ -22,7 +22,6 @@ const subtleGlow = keyframes`
   }
 `;
 
-// Pure CSS text-reveal sequence
 const textReveal = keyframes`
   0% {
     opacity: 0;
@@ -48,6 +47,8 @@ export const HeroLayout = styled.section`
 	display: flex;
 	align-items: center;
 	overflow: hidden;
+	max-width: 100%;
+	padding: 7rem 1rem;
 
 	background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 70%);
 	background-size: 150% 150%;
@@ -81,7 +82,7 @@ export const HeroLayout = styled.section`
 	.hero-container {
 		position: relative;
 		z-index: 10;
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 		display: flex;
@@ -90,7 +91,7 @@ export const HeroLayout = styled.section`
 	}
 
 	.hero-title {
-		font-size: 3.5rem;
+		font-size: 4rem;
 		font-weight: 800;
 		line-height: 1.2;
 		letter-spacing: -0.05em;
@@ -123,7 +124,7 @@ export const HeroLayout = styled.section`
 	}
 
 	.hero-subtitle {
-		font-size: 1.25rem;
+		font-size: 2.25rem;
 		color: #94a3b8;
 		max-width: 600px;
 		margin-bottom: 2.5rem;

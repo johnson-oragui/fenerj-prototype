@@ -11,9 +11,10 @@ export const PrivacyLayout = styled.div<LayoutProps>`
 	color: #f8fafc;
 	min-height: 100vh;
 	padding: 4rem 0;
+	max-width: 100%;
 
 	.privacy-container {
-		max-width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}
