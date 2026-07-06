@@ -73,6 +73,9 @@ export const ServicesLayout = styled.section`
 		border-radius: 12px;
 		display: flex;
 		flex-direction: column;
+		@media only screen and (max-width: 400px) {
+			width: 90%;
+		}
 
 		animation: ${ambientGlow} 6s ease-in-out infinite;
 		will-change: transform, border-color, box-shadow;
