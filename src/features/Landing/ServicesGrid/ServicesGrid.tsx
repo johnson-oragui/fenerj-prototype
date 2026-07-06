@@ -70,7 +70,7 @@ export const ServicesGrid = () => {
 	];
 
 	return (
-		<ServicesLayout id="1">
+		<ServicesLayout id="services">
 			<div className="services-container">
 				<header className="services-header">
 					<span className="services-tag">Services Blueprint</span>

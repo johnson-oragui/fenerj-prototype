@@ -1,39 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import CustomButton from '@/components/CustomButton/CustomButton';
 import { AboutLayoutStyle } from './AboutStyle';
+import { keyProjects, teamMembers } from './data';
 
 export const About = () => {
-	const teamMembers = [
-		{ name: 'Engr. James Ugbojoide', role: 'Managing Director / CEO' },
-		{ name: 'Mrs. Ojochenemi James', role: 'Director' },
-		{ name: 'Engr. Emmanuel S. Ogbodo', role: 'Technical Lead' },
-		{ name: 'Engr. Puis Abu', role: 'Structural Engineer' },
-		{ name: 'Engr. Peter Ujah', role: 'Building Engineer' },
-		{ name: 'Engr. Emmanuel Agada', role: 'Civil Engineer' },
-		{ name: 'Engr. Daniel Abah', role: 'Electrical Engineering Engineer' },
-		{ name: 'Joseph Obaji Enemali', role: 'Software Development Lead' },
-	];
-
-	const keyProjects = [
-		{
-			client: 'FCTA WMAN',
-			scope: 'Wide Area Network infrastructure routing layouts.',
-		},
-		{
-			client: 'National Assembly Complex',
-			scope: 'Deployments of integrated open-source IP phone networks.',
-		},
-		{
-			client: 'Nigeria Stock Exchange',
-			scope: 'High-availability secure enterprise networking configurations.',
-		},
-		{
-			client: 'Embassies of Turkey & India',
-			scope: 'Subcontracted structural secure networks via Globacom World.',
-		},
-	];
-
 	return (
 		<AboutLayoutStyle>
 			<section className="about-hero">
@@ -102,9 +74,18 @@ export const About = () => {
 					<div className="team-grid">
 						{teamMembers.map((member, idx) => (
 							<div className="team-card" key={idx}>
-								<div className="image-placeholder member-avatar-placeholder">
-									<span>👤</span>[ Portrait Asset: {member.name.split(' ')[1]} ]
-								</div>
+								{member?.image ? (
+									<img
+										src={member.image}
+										alt={`Portrait: ${member.name.split(' ')[1]}`}
+									/>
+								) : (
+									<div className="image-placeholder member-avatar-placeholder">
+										<span>👤</span>[ Portrait Asset: {member.name.split(' ')[1]}{' '}
+										]
+									</div>
+								)}
+
 								<div className="member-info">
 									<h4>{member.name}</h4>
 									<p>{member.role}</p>
@@ -192,7 +173,7 @@ export const About = () => {
 								📞 Phone: <strong>+234 8076688233</strong>
 							</span>
 							<span>
-								✉️ Email: <strong>Fenerjeng@gmail.com</strong>
+								✉️ Email: <strong>fenerjeng@gmail.com</strong>
 							</span>
 						</div>
 					</div>

@@ -1,17 +1,18 @@
 'use client';
 
-import { Hero } from './Hero/Hero';
+import ParentHeroSection from './HeroCarousel/HeroCarousel';
 import { LandingFAQ } from './LandingFAQ/LandingFAQ';
 import { LandingPageStyle } from './LandingStyle';
+import PortfolioSection from './PortfolioSection/PortfolioSection';
 import { ServicesGrid } from './ServicesGrid/ServicesGrid';
 import { StrategicSection } from './StrategicSection/StrategicSection';
-// import Testimonials from './Testimonials/Testimonials';
 
 export default function Landing() {
 	return (
 		<LandingPageStyle>
-			<Hero />
+			<ParentHeroSection />
 			<ServicesGrid />
+			<PortfolioSection />
 			<StrategicSection />
 			{/* <Testimonials /> */}
 			<LandingFAQ />
