@@ -33,7 +33,7 @@ export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 	}
 
 	.nav-link {
-		color: #94a3b8;
+		color: white;
 		text-decoration: none;
 		font-weight: 500;
 		transition: color 0.2s ease;
