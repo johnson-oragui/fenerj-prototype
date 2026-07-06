@@ -181,7 +181,7 @@ export const ContactUs = () => {
 								</div>
 								<div className="node-details">
 									<h3>Direct Liaison Office</h3>
-									<p className="contact-link-text">+234 (0) 803 000 0000</p>
+									<p className="contact-link-text">+234 (0) 807 668 8233</p>
 									<p className="sub-label">Project Desk Intake</p>
 								</div>
 							</div>
