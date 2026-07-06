@@ -7,6 +7,7 @@ export const FAQClientStyle = styled.div`
 	color: #f8fafc;
 	min-height: 100vh;
 	padding: 6rem 0;
+	margin-top: 70px;
 
 	.faq-container {
 		max-width: 820px;

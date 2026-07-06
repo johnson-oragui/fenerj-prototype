@@ -7,4 +7,6 @@ export const LandingPageStyle = styled.main`
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	height: 100px;
+	margin-top: 70px;
 `;
