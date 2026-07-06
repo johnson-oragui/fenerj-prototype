@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { APP_LOGO } from '../../../public/path/asset-paths';
 import { FooterLayoutStyle } from './FooterStyle';
-import { LuLinkedin, LuTwitter, LuFacebook } from 'react-icons/lu';
+import { LuTwitter, LuFacebook } from 'react-icons/lu';
 
 export const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -30,17 +30,17 @@ export const Footer = () => {
 						</p>
 
 						<div className="social-group">
-							<a
-								href="https://linkedin.com"
+							{/* <a
+								href="https://linkedin.com/fenerj-engineering"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-icon"
 								aria-label="LinkedIn"
 							>
 								<LuLinkedin />
-							</a>
+							</a> */}
 							<a
-								href="https://x.com"
+								href="https://x.com/fenerj-engineering"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-icon"
@@ -49,7 +49,7 @@ export const Footer = () => {
 								<LuTwitter />
 							</a>
 							<a
-								href="https://fb.com"
+								href="https://www.facebook.com/share/1Z9cifmdyc/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-icon"
