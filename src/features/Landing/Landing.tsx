@@ -1,5 +1,6 @@
 'use client';
 
+import { Footer } from '../Footer/Footer';
 import ParentHeroSection from './HeroCarousel/HeroCarousel';
 import { LandingFAQ } from './LandingFAQ/LandingFAQ';
 import { LandingPageStyle } from './LandingStyle';
@@ -16,6 +17,7 @@ export default function Landing() {
 			<StrategicSection />
 			{/* <Testimonials /> */}
 			<LandingFAQ />
+			<Footer />
 		</LandingPageStyle>
 	);
 }

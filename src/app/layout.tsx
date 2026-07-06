@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+// import './globals.css';
 import StyledComponentsRegistry from '../../lib/registry';
 import Navbar from '@/features/NavBar/NavBar';
 import { Footer } from '@/features/Footer/Footer';
+import { GlobalStyles } from './GlobalStyles';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,8 +22,9 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className}>
 				<StyledComponentsRegistry>
+					<GlobalStyles />
 					<Navbar />
-					<div style={{ paddingTop: '70px' }}>{children}</div>
+					<div>{children}</div>
 					<Footer />
 				</StyledComponentsRegistry>
 			</body>
