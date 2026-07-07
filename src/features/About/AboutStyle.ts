@@ -6,6 +6,7 @@ export const AboutLayoutStyle = styled.main`
 	color: #f8fafc;
 	max-width: 100%;
 	padding-bottom: 5rem;
+	margin-top: 70px;
 
 	.container {
 		max-width: 100%;

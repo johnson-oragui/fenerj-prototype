@@ -1,4 +1,8 @@
-import { MD_IMAGE } from '../../../public/path/asset-paths';
+import {
+	MD_IMAGE,
+	DATA_ANALYST_IMAGE,
+	FULLSTACK_IMAGE,
+} from '../../../public/path/asset-paths';
 
 export const teamMembers = [
 	{
@@ -9,10 +13,14 @@ export const teamMembers = [
 	{ name: 'Mrs. Ojochenemi James', role: 'Director' },
 	{ name: 'Engr. Emmanuel S. Ogbodo', role: 'Technical Lead' },
 	{ name: 'Engr. Puis Abu', role: 'Structural Engineer' },
-	{ name: 'Engr. Peter Ujah', role: 'Building Engineer' },
-	{ name: 'Engr. Emmanuel Agada', role: 'Civil Engineer' },
+	{ name: 'Neibo Augustine', role: 'Data Analyst', image: DATA_ANALYST_IMAGE },
 	{ name: 'Engr. Daniel Abah', role: 'Electrical Engineering Engineer' },
 	{ name: 'Joseph Obaji Enemali', role: 'Software Development Lead' },
+	{
+		name: 'Oragui Johnson',
+		role: 'Software Developer',
+		image: FULLSTACK_IMAGE,
+	},
 ];
 export const keyProjects = [
 	{

@@ -1,9 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-'use client';
-
 import CustomButton from '@/components/CustomButton/CustomButton';
 import { AboutLayoutStyle } from './AboutStyle';
 import { keyProjects, teamMembers } from './data';
+import Image from 'next/image';
 
 export const About = () => {
 	return (
@@ -75,10 +73,16 @@ export const About = () => {
 						{teamMembers.map((member, idx) => (
 							<div className="team-card" key={idx}>
 								{member?.image ? (
-									<img
-										src={member.image}
+									// <img
+									// 	src={member.image}
+									// 	alt={`Portrait: ${member.name.split(' ')[1]}`}
+									// />
+									<Image
 										alt={`Portrait: ${member.name.split(' ')[1]}`}
-									/>
+										src={member.image}
+										width={350}
+										height={400}
+									></Image>
 								) : (
 									<div className="image-placeholder member-avatar-placeholder">
 										<span>👤</span>[ Portrait Asset: {member.name.split(' ')[1]}{' '}

@@ -6,13 +6,15 @@ export const HeroCarouselStyles = styled.section`
 	position: relative;
 	background-color: #0b1329;
 	min-height: 95vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	border-bottom: 1px solid #27272a;
-	overflow: hidden;
-	@media only screen and (max-width: 400px) {
+	/* overflow: hidden; */
+	@media only screen and (max-width: 1024px) {
 		width: 100%;
+		min-height: 145vh;
 	}
 
 	.slider-container {
