@@ -1,6 +1,7 @@
 'use client';
 
 import styled from 'styled-components';
+
 export const AboutLayoutStyle = styled.main`
 	background-color: #0f172a;
 	color: #f8fafc;
@@ -163,8 +164,21 @@ export const AboutLayoutStyle = styled.main`
 
 		.team-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			grid-template-columns: repeat(4, minmax(260px, 1fr));
 			gap: 2rem;
+
+			@media only screen and (max-width: 1192px) {
+				grid-template-columns: repeat(3, minmax(auto, 1fr));
+			}
+			@media only screen and (max-width: 893px) {
+				grid-template-columns: repeat(2, minmax(auto, 1fr));
+			}
+			@media only screen and (max-width: 602px) {
+				grid-template-columns: repeat(2, minmax(auto, 1fr));
+			}
+			@media only screen and (max-width: 450px) {
+				grid-template-columns: repeat(1, minmax(auto, 1fr));
+			}
 		}
 
 		.team-card {
@@ -179,6 +193,21 @@ export const AboutLayoutStyle = styled.main`
 			&:hover {
 				transform: translateY(-4px);
 				border-color: #3b82f6;
+			}
+
+			.image-wrapper {
+				position: relative;
+				width: 100%;
+				aspect-ratio: 7 / 10;
+				overflow: hidden;
+
+				@media only screen and (max-width: 301px) {
+					width: auto;
+				}
+			}
+
+			.asset-image {
+				object-fit: cover;
 			}
 
 			.member-avatar-placeholder {
