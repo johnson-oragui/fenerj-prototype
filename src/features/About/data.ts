@@ -2,6 +2,7 @@ import {
 	MD_IMAGE,
 	DATA_ANALYST_IMAGE,
 	FULLSTACK_IMAGE,
+	DIRECTOR_IMAGE,
 } from '../../../public/path/asset-paths';
 
 export const teamMembers = [
@@ -10,7 +11,7 @@ export const teamMembers = [
 		role: 'Managing Director / CEO',
 		image: MD_IMAGE,
 	},
-	{ name: 'Mrs. Ojochenemi James', role: 'Director' },
+	{ name: 'Mrs. Ojochenemi Onje', role: 'Director', image: DIRECTOR_IMAGE },
 	{ name: 'Engr. Emmanuel S. Ogbodo', role: 'Technical Lead' },
 	{ name: 'Engr. Puis Abu', role: 'Structural Engineer' },
 	{ name: 'Neibo Augustine', role: 'Data Analyst', image: DATA_ANALYST_IMAGE },
