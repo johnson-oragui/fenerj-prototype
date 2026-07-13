@@ -3,6 +3,8 @@ import {
 	DATA_ANALYST_IMAGE,
 	FULLSTACK_IMAGE,
 	DIRECTOR_IMAGE,
+	DEVELOPER_IMAGE,
+	TECHNICAL_LEAD_IMAGE,
 } from '../../../public/path/asset-paths';
 
 export const teamMembers = [
@@ -12,11 +14,19 @@ export const teamMembers = [
 		image: MD_IMAGE,
 	},
 	{ name: 'Mrs. Ojochenemi Onje', role: 'Director', image: DIRECTOR_IMAGE },
-	{ name: 'Engr. Emmanuel S. Ogbodo', role: 'Technical Lead' },
+	{
+		name: 'Engr. Emmanuel S. Ogbodo',
+		role: 'Technical Lead',
+		image: TECHNICAL_LEAD_IMAGE,
+	},
 	{ name: 'Engr. Puis Abu', role: 'Structural Engineer' },
 	{ name: 'Neibo Augustine', role: 'Data Analyst', image: DATA_ANALYST_IMAGE },
 	{ name: 'Engr. Daniel Abah', role: 'Electrical Engineering Engineer' },
-	{ name: 'Joseph Obaji Enemali', role: 'Software Development Lead' },
+	{
+		name: 'Joseph Obaji Enemali',
+		role: 'Software Development Lead',
+		image: DEVELOPER_IMAGE,
+	},
 	{
 		name: 'Oragui Johnson',
 		role: 'Software Developer',
