@@ -129,7 +129,29 @@ export const SubHeroSlideStyle = styled.div<{ $isActive: boolean }>`
 		}
 	}
 
+	.image-wrapper {
+		position: absolute;
+		width: 100%;
+		aspect-ratio: 7 / 8;
+		overflow: hidden;
+		inset: 0;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.55;
+		filter: grayscale(20%) contrast(105%);
+	}
+
 	.hero-image {
+		/* position: absolute; */
+		object-fit: cover;
+		opacity: 0.55;
+		filter: grayscale(20%) contrast(105%);
+		inset: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* .hero-image {
 		position: absolute;
 		inset: 0;
 		width: 100%;
@@ -137,7 +159,7 @@ export const SubHeroSlideStyle = styled.div<{ $isActive: boolean }>`
 		object-fit: cover;
 		opacity: 0.55;
 		filter: grayscale(20%) contrast(105%);
-	}
+	} */
 
 	.hero-overlay-card {
 		position: absolute;

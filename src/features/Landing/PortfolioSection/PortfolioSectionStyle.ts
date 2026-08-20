@@ -164,6 +164,13 @@ export const PortfolioSectionStyle = styled.section<{
 		}
 	}
 
+	.image-container {
+		position: relative;
+		width: 100%;
+		inset: 0;
+		opacity: 0.7;
+	}
+
 	.project-image {
 		width: 100%;
 		height: 100%;

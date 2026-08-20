@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { HiArrowRight, HiMap, HiOutlineFolderAdd } from 'react-icons/hi';
 import { PortfolioSectionStyle } from './PortfolioSectionStyle';
 import { engineeringProjects } from './data';
+import Image from 'next/image';
 
 export default function PortfolioSection() {
 	return (
@@ -31,11 +31,15 @@ export default function PortfolioSection() {
 						className="project-card"
 					>
 						<div className="image-container">
-							<img
-								src={project.imageUrl}
-								alt={project.title}
-								className="project-image"
-							/>
+							<div className="image-wrapper">
+								<Image
+									src={project.imageUrl}
+									alt={project.title}
+									className="project-image"
+									fill
+								/>
+							</div>
+
 							<span className="project-category-badge">{project.category}</span>
 						</div>
 

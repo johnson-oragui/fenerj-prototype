@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import { ISubHeroSlideProps } from './interface';
 import { SubHeroSlideStyle } from './SubHeroSlideStyle';
 
@@ -25,7 +25,15 @@ export const SubHeroSlide = ({ slide, isActive }: ISubHeroSlideProps) => {
 			</div>
 
 			<div className="hero-visual-side">
-				<img src={slide.imageSrc} alt={slide.tag} className="hero-image" />
+				<div className="image-wrapper">
+					<Image
+						src={slide.imageSrc}
+						alt={slide.tag}
+						className="hero-image"
+						fill
+					/>
+				</div>
+
 				<div className="hero-overlay-card">
 					<p className="hero-stat-label">{slide.statLabel}</p>
 					<p className="hero-stat-value">{slide.statValue}</p>
