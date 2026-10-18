@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-// import './globals.css';
-import StyledComponentsRegistry from '../../lib/registry';
-import Navbar from '@/features/NavBar/NavBar';
-import { Footer } from '@/features/Footer/Footer';
-import { GlobalStyles } from './GlobalStyles';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import StyledComponentsRegistry from "../../lib/registry";
+import Navbar from "@/features/NavBar/NavBar";
+import { Footer } from "@/features/Footer/Footer";
+import { GlobalStyles } from "./GlobalStyles";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: 'Fenerj App',
-	description: 'A Tech Company.',
+	title: "Fenerj App",
+	description: "A Tech Company.",
 };
 
 export default function RootLayout({

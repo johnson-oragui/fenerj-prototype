@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { ISubHeroSlideProps } from './interface';
-import { SubHeroSlideStyle } from './SubHeroSlideStyle';
+import { ISubHeroSlideProps } from "./interface";
+import { SubHeroSlideStyle } from "./SubHeroSlideStyle";
 
 export const SubHeroSlide = ({ slide, isActive }: ISubHeroSlideProps) => {
 	return (
@@ -15,17 +15,27 @@ export const SubHeroSlide = ({ slide, isActive }: ISubHeroSlideProps) => {
 				</h1>
 				<p className="hero-description">{slide.desc}</p>
 				<div className="hero-cta-group">
-					<a href="#services" className="btn-primary">
+					<a
+						href="#services"
+						className="btn-primary"
+					>
 						Explore Capabilities
 					</a>
-					<a href="/contact" className="btn-secondary">
+					<a
+						href="/contact"
+						className="btn-secondary"
+					>
 						Request Consultation
 					</a>
 				</div>
 			</div>
 
 			<div className="hero-visual-side">
-				<img src={slide.imageSrc} alt={slide.tag} className="hero-image" />
+				<img
+					src={slide.imageSrc}
+					alt={slide.tag}
+					className="hero-image"
+				/>
 				<div className="hero-overlay-card">
 					<p className="hero-stat-label">{slide.statLabel}</p>
 					<p className="hero-stat-value">{slide.statValue}</p>

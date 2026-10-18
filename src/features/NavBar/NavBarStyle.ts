@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 	position: fixed;
@@ -41,6 +41,11 @@ export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 		&:hover {
 			color: #f8fafc;
 		}
+
+		&.active_link {
+			color: #1c82f1;
+			transform: translateX(6px);
+		}
 	}
 
 	.hamburger-btn {
@@ -70,18 +75,18 @@ export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 
 			&:nth-child(1) {
 				transform: ${({ $isOpen }) =>
-					$isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+					$isOpen ? "rotate(45deg)" : "rotate(0)"};
 			}
 
 			&:nth-child(2) {
-				opacity: ${({ $isOpen }) => ($isOpen ? '0' : '1')};
+				opacity: ${({ $isOpen }) => ($isOpen ? "0" : "1")};
 				transform: ${({ $isOpen }) =>
-					$isOpen ? 'translateX(20px)' : 'translateX(0)'};
+					$isOpen ? "translateX(20px)" : "translateX(0)"};
 			}
 
 			&:nth-child(3) {
 				transform: ${({ $isOpen }) =>
-					$isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+					$isOpen ? "rotate(-45deg)" : "rotate(0)"};
 			}
 		}
 	}
@@ -103,7 +108,7 @@ export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 			right: 0;
 			transition: transform 0.3s ease-in-out;
 			transform: ${({ $isOpen }) =>
-				$isOpen ? 'translateX(0)' : 'translateX(100%)'};
+				$isOpen ? "translateX(0)" : "translateX(100%)"};
 			box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.5);
 			z-index: 105;
 		}
@@ -119,7 +124,7 @@ export const NavbarLayout = styled.header<{ $isOpen: boolean }>`
 		display: none;
 
 		@media (max-width: 768px) {
-			display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+			display: ${({ $isOpen }) => ($isOpen ? "block" : "none")};
 			position: fixed;
 			top: 0;
 			left: 0;
