@@ -1,42 +1,52 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { NavbarLayout } from './NavBarStyle';
-import Link from 'next/link';
-import Image from 'next/image';
-import { APP_LOGO } from '../../../public/path/asset-paths';
+import { useState } from "react";
+import { NavbarLayout } from "./NavBarStyle";
+import Link from "next/link";
+import Image from "next/image";
+import { APP_LOGO } from "../../../public/path/asset-paths";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+	const pathname = usePathname();
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => setIsOpen(!isOpen);
 	const closeMenu = () => setIsOpen(false);
 
 	const navigationItems = [
-		{ label: 'Home', href: '/#0' },
-		{ label: 'Services', href: '/#services' },
-		{ label: 'FAQ', href: '/faq' },
-		{ label: 'Contact', href: '/contact' },
-		{ label: 'About Us', href: '/about' },
+		{ label: "Home", href: "/#0" },
+		{ label: "Services", href: "/#services" },
+		{ label: "FAQ", href: "/faq" },
+		{ label: "Contact", href: "/contact" },
+		{ label: "Projects", href: "/projects" },
+		{ label: "About Us", href: "/about" },
 	];
 
 	return (
 		<NavbarLayout $isOpen={isOpen}>
-			<div className="nav-logo" onClick={closeMenu}>
+			<div
+				className="nav-logo"
+				onClick={closeMenu}
+			>
 				<Link href="/">
 					<Image
-						alt={process.env.NEXT_PUBLIC_APP_NAME || 'FENERJ Engineering'}
+						alt={process.env.NEXT_PUBLIC_APP_NAME || "FENERJ Engineering"}
 						src={APP_LOGO}
 						width={90}
 						height={26}
-						style={{ objectFit: 'contain', borderRadius: '35px' }}
+						style={{ objectFit: "contain", borderRadius: "35px" }}
 					/>
 				</Link>
 			</div>
 
 			<nav className="desktop-menu">
 				{navigationItems.map((item) => (
-					<a key={item.label} href={item.href} className="nav-link">
+					<a
+						key={item.label}
+						href={item.href}
+						className={`nav-link ${pathname === item.href ? "active_link" : ""}`}
+					>
 						{item.label}
 					</a>
 				))}
@@ -57,7 +67,7 @@ const Navbar = () => {
 					<a
 						key={item.label}
 						href={item.href}
-						className="nav-link"
+						className={`nav-link ${pathname === item.href ? "active_link" : ""}`}
 						onClick={closeMenu}
 					>
 						{item.label}
@@ -65,7 +75,10 @@ const Navbar = () => {
 				))}
 			</nav>
 
-			<div className="drawer-backdrop" onClick={closeMenu} />
+			<div
+				className="drawer-backdrop"
+				onClick={closeMenu}
+			/>
 		</NavbarLayout>
 	);
 };

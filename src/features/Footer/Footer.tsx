@@ -1,12 +1,14 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { APP_LOGO } from '../../../public/path/asset-paths';
-import { FooterLayoutStyle } from './FooterStyle';
-import { LuTwitter, LuFacebook, LuInstagram } from 'react-icons/lu';
+import Image from "next/image";
+import Link from "next/link";
+import { APP_LOGO } from "../../../public/path/asset-paths";
+import { FooterLayoutStyle } from "./FooterStyle";
+import { LuFacebook, LuInstagram } from "react-icons/lu";
+import { usePathname } from "next/navigation";
 
 export const Footer = () => {
+	const pathname = usePathname();
 	const currentYear = new Date().getFullYear();
 
 	return (
@@ -14,13 +16,16 @@ export const Footer = () => {
 			<div className="footer-container">
 				<div className="footer-top">
 					<div className="brand-column">
-						<Link href="/#0" className="footer-logo">
+						<Link
+							href="/#0"
+							className="footer-logo"
+						>
 							<Image
-								alt={process.env.NEXT_PUBLIC_APP_NAME || 'FENERJ Engineering'}
+								alt={process.env.NEXT_PUBLIC_APP_NAME || "FENERJ Engineering"}
 								src={APP_LOGO}
 								width={120}
 								height={40}
-								style={{ objectFit: 'contain' }}
+								style={{ objectFit: "contain" }}
 							/>
 						</Link>
 						<p className="brand-desc">
@@ -71,26 +76,47 @@ export const Footer = () => {
 
 					<div className="link-column">
 						<h4>Company</h4>
-						<Link href="/about" className="footer-link">
+						<Link
+							href="/about"
+							className={`footer-link ${pathname === "/about" ? "active-footer" : ""}`}
+						>
 							About Us
 						</Link>
-						<Link href="/#1" className="footer-link">
+						<Link
+							href="/#1"
+							className={`footer-link`}
+						>
 							Our Blueprint
 						</Link>
-						<Link href="/contact" className="footer-link">
+						<Link
+							href="/contact"
+							className={`footer-link ${pathname === "/contact" ? "active-footer" : ""}`}
+						>
 							Contact
+						</Link>
+						<Link
+							href="/projects"
+							className={`footer-link ${pathname === "/projects" ? "active-footer" : ""}`}
+						>
+							Projects
 						</Link>
 					</div>
 
 					<div className="link-column">
 						<h4>Resources</h4>
-						<Link href="/faq" className="footer-link">
+						<Link
+							href="/faq"
+							className={`footer-link ${pathname === "/faq" ? "active-footer" : ""}`}
+						>
 							Knowledge FAQ
 						</Link>
-						{/* <Link href="/guides" className="footer-link">
+						{/* <Link href="/guides" className={`footer-link ${pathname === ""?"":""}`}>
 							Network Guide
 						</Link> */}
-						<a href="mailto:fenerjeng@gmail.com" className="footer-link">
+						<a
+							href="mailto:fenerjeng@gmail.com"
+							className={`footer-link`}
+						>
 							Direct Support
 						</a>
 					</div>
@@ -114,10 +140,16 @@ export const Footer = () => {
 					</small>
 
 					<div className="legal-links">
-						<Link href="/privacy" className="footer-link">
+						<Link
+							href="/privacy"
+							className={`footer-link ${pathname === "" ? "" : ""}`}
+						>
 							Privacy Policy
 						</Link>
-						<Link href="/terms" className="footer-link">
+						<Link
+							href="/terms"
+							className={`footer-link ${pathname === "" ? "" : ""}`}
+						>
 							Terms of Service
 						</Link>
 					</div>

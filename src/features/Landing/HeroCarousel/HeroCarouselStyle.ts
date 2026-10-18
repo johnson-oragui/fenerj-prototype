@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeroCarouselStyles = styled.section`
 	position: relative;
@@ -11,6 +11,7 @@ export const HeroCarouselStyles = styled.section`
 	flex-direction: column;
 	justify-content: space-between;
 	border-bottom: 1px solid #27272a;
+
 	/* overflow: hidden; */
 	@media only screen and (max-width: 1024px) {
 		width: 100%;

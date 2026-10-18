@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SubHeroSlideStyle = styled.div<{ $isActive: boolean }>`
 	position: absolute;
@@ -10,11 +10,12 @@ export const SubHeroSlideStyle = styled.div<{ $isActive: boolean }>`
 	width: 100%;
 	height: 100%;
 	opacity: ${(props) => (props.$isActive ? 1 : 0)};
-	visibility: ${(props) => (props.$isActive ? 'visible' : 'hidden')};
+	visibility: ${(props) => (props.$isActive ? "visible" : "hidden")};
 	z-index: ${(props) => (props.$isActive ? 20 : 10)};
 	transition:
 		opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
 		visibility 0.8s ease;
+	margin-top: 1rem;
 
 	@media (min-width: 1024px) {
 		grid-template-columns: 1.2fr 1fr;

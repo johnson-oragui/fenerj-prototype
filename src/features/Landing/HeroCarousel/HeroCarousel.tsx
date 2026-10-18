@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { heroServiceSlides } from './data';
-import { SubHeroSlide } from './SubHeroSlide/SubHeroSlide';
-import { HeroCarouselStyles } from './HeroCarouselStyle';
+import { useState, useEffect } from "react";
+import { heroServiceSlides } from "./data";
+import { SubHeroSlide } from "./SubHeroSlide/SubHeroSlide";
+import { HeroCarouselStyles } from "./HeroCarouselStyle";
 
 export default function HeroCarousel() {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,14 +45,14 @@ export default function HeroCarousel() {
 						>
 							<div className="tab-track">
 								<div
-									className={`tab-progress ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}`}
+									className={`tab-progress ${isActive ? "active" : ""} ${isCompleted ? "completed" : ""}`}
 									style={{
-										animationDuration: isActive ? `${SLIDE_DURATION}ms` : '0ms',
+										animationDuration: isActive ? `${SLIDE_DURATION}ms` : "0ms",
 									}}
 								/>
 							</div>
-							<span className={`tab-name ${isActive ? 'active' : ''}`}>
-								{slide.tag.split(' & ')[0]}
+							<span className={`tab-name ${isActive ? "active" : ""}`}>
+								{slide.tag.split(" & ")[0]}
 							</span>
 						</button>
 					);

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FooterLayoutStyle = styled.footer`
 	background-color: #0b1329;
@@ -80,6 +80,11 @@ export const FooterLayoutStyle = styled.footer`
 			&:hover {
 				color: #3b82f6;
 				transform: translateX(4px);
+			}
+
+			&.active-footer {
+				color: #1c82f1;
+				transform: translateX(6px);
 			}
 		}
 
